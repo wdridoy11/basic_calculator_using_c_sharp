@@ -17,10 +17,11 @@ namespace WindowsApp
             InitializeComponent();
         }
 
-
+        //=== variable declared
         int number1, number2, result;
         string mathOperator;
 
+        //=== When users click number key, saw this number in input field
         private void button9_Click(object sender, EventArgs e)
         {
             inputField.Text = inputField.Text + "9";
@@ -70,13 +71,14 @@ namespace WindowsApp
             inputField.Text = inputField.Text + "0";
         }
 
+        //=== All number clear from input field
         private void button20_Click(object sender, EventArgs e)
         {
             inputField.Clear();
         }
 
-       
 
+        //=== When user click math operator, they store value in number1 variable, and clear input field
         private void button18_Click(object sender, EventArgs e)
         {
             number1 = int.Parse(inputField.Text);
@@ -104,31 +106,24 @@ namespace WindowsApp
             inputField.Clear();
         }
 
+        //=== All mathematics works
         private void button19_Click(object sender, EventArgs e)
         {
             number2 = int.Parse(inputField.Text);
             if (mathOperator == "+") 
             result = number1 + number2;
 
-            if (mathOperator == "-") 
+            else if (mathOperator == "-") 
             result = number1 - number2;
 
-            if (mathOperator == "*") 
+            else if (mathOperator == "*") 
             result = number1 * number2;
 
-            if (mathOperator == "/") 
+            else if (mathOperator == "/") 
             result = number1 / number2;
 
             inputField.Text = result.ToString();
         }
-
-        
-        private void button13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
 
         
     }
