@@ -17,105 +17,119 @@ namespace WindowsApp
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+
+        int number1, number2, result;
+        string mathOperator;
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            inputField.Text = inputField.Text + "9";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            inputField.Text = inputField.Text + "8";
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            inputField.Text = inputField.Text + "7";
+        }
+
+        private void button13_Click_1(object sender, EventArgs e)
+        {
+            inputField.Text = inputField.Text + "6";
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            inputField.Text = inputField.Text + "5";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            inputField.Text = inputField.Text + "4";
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            inputField.Text = inputField.Text + "3";
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            inputField.Text = inputField.Text + "2";
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            inputField.Text = inputField.Text + "1";
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            inputField.Text = inputField.Text + "0";
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            inputField.Clear();
+        }
+
+       
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            number1 = int.Parse(inputField.Text);
+            mathOperator = "+";
+            inputField.Clear();
+        }
+        private void button17_Click(object sender, EventArgs e)
+        {
+            number1 = int.Parse(inputField.Text);
+            mathOperator = "-";
+            inputField.Clear();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            number1 = int.Parse(inputField.Text);
+            mathOperator = "*";
+            inputField.Clear();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            number1 = int.Parse(inputField.Text);
+            mathOperator = "/";
+            inputField.Clear();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            number2 = int.Parse(inputField.Text);
+            if (mathOperator == "+") 
+            result = number1 + number2;
+
+            if (mathOperator == "-") 
+            result = number1 - number2;
+
+            if (mathOperator == "*") 
+            result = number1 * number2;
+
+            if (mathOperator == "/") 
+            result = number1 / number2;
+
+            inputField.Text = result.ToString();
+        }
+
+        
+        private void button13_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void myNameToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Hello Bangladesh!");
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //int a, b, c;
-            //a =Convert.ToInt16(firstInput.Text);
-            //b =Convert.ToInt16(secoundInput.Text);
-            //c = a * b;
-            //sumOutpu.Text = c.ToString();
-        }
 
-        //sum
-        private void add_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int input1, input2, sum;
-                if (!string.IsNullOrEmpty(inputField1.Text)) ;
-                input1 = Convert.ToInt16(inputField1.Text);
-
-                if (!string.IsNullOrEmpty(inputField2.Text)) ;
-                input2 = Convert.ToInt16(inputField2.Text);
-
-                sum = input1 + input2;
-                output.Text = sum.ToString();
-            }
-            catch
-            {
-                MessageBox.Show("Please put any number");
-            }
-        }
-
-        // sub
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int input1, input2, sub;
-                if (!string.IsNullOrEmpty(inputField1.Text)) ;
-                input1 = Convert.ToInt16(inputField1.Text);
-
-                if (!string.IsNullOrEmpty(inputField2.Text)) ;
-                input2 = Convert.ToInt16(inputField2.Text);
-
-                sub = input1 - input2;
-                output.Text = sub.ToString();
-            }
-            catch
-            {
-                MessageBox.Show("Please put any number");
-            }
-        }
-        //multiplication
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int input1, input2, multiplication;
-                if (!string.IsNullOrEmpty(inputField1.Text)) ;
-                input1 = Convert.ToInt16(inputField1.Text);
-
-                if (!string.IsNullOrEmpty(inputField2.Text)) ;
-                input2 = Convert.ToInt16(inputField2.Text);
-
-                multiplication = input1 * input2;
-                output.Text = multiplication.ToString();
-            }
-            catch
-            {
-                MessageBox.Show("Please put any number");
-            }
-        }
-        //division
-        private void button4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int input1, input2, division;
-                if (!string.IsNullOrEmpty(inputField1.Text)) ;
-                input1 = Convert.ToInt16(inputField1.Text);
-
-                if (!string.IsNullOrEmpty(inputField2.Text)) ;
-                input2 = Convert.ToInt16(inputField2.Text);
-
-                division = input1 / input2;
-                output.Text = division.ToString();
-            }
-            catch
-            {
-                MessageBox.Show("Please put any number");
-            }
-        }
+        
     }
 }
